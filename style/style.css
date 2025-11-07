@@ -1,5 +1,520 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121517;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1512px;
+    padding: 0 130px;
+}
+
+/* Стили для шапки */
+.header {
+    background-color: #121517;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 105px;
+    display: flex;
+    align-items: center;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 648px;
+
+}
+
+.header__logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 37px;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 41px;
+    width: 195px;
+    display: flex;
+    margin-right: 94px;
+    background: linear-gradient(90deg, #35C66B, #237249);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav__lists {
+    display: flex;
+    list-style: none;
+    gap: 94px;
+}
+
+.nav__link {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+    text-decoration: none;
+    height: 23px;
+    line-height: 23px;
+    display: block;
+}
+
+.nav__link:hover {
+    color: #35C66B;
+}
+
+
+/* Стили для секции StarBucks */
+.starbucks-section {
+    background-color: #121517;
+    color: white;
+    position: relative;
+    margin-top: 105px;
+}
+
+.starbucks-section .container{
+    padding: 0 184.65px 31px 130px;
+}
+
+.starbucks__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 155px;
+    margin-bottom: 13px;
+}
+
+.starbucks__info-content {
+    padding: 64px 0 0 0;
+}
+
+.starbucks__title {
+    font-size:  80px;
+    font-weight: 800;
+    margin-bottom: 54px;
+    line-height: 109.5%;/*??????????????????*/
+    position: relative;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #35C66B, #237249);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.starbucks__description {
+    width: 100%;
+    max-width: 572px;
+    font-size: 20px;
+    color: #D9D9D9;
+    margin-bottom: 54px;
+    height: 66px;
+}
+
+.starbucks__buttons {
+    display: flex;
+    gap: 16.36px;
+    margin-bottom: 54px;
+}
+
+.starbucks__button-primary {
+    background: linear-gradient(90deg, #35C66B, #237249);
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    padding: 20px 79.38px 19.65px 78px;
+    font-weight: 639;
+    cursor: pointer;
+    border-radius: 82.83px;
+    /* min-width: 223.41px; */
+}
+
+.starbucks__button-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    background: linear-gradient(0deg, #35C66B, #237249);
+}
+
+.starbucks__button-secondary {
+    background: 
+        linear-gradient(#121517, #121517) padding-box,
+        linear-gradient(160deg, #DADADA, #121517) border-box;
+    border: 1px solid transparent;
+    color: #D9D9D9;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    padding: 20px 53.71px 19.65px 54.26px;
+    cursor: pointer;
+    border-radius: 82.83px;
+    /* min-width: 112.56px; */
+}
+
+.starbucks__button-secondary:hover {
+    color: #35C66B;
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.starbucks__stats {
+    display: flex;
+    gap: 46.02px;
+}
+
+.starbucks__stat-item {
+    text-align: left;
+}
+
+.starbucks__stat-number {
+    font-size: 62px;
+    line-height: 68px;
+    color: #fff;
+}
+
+.starbucks__stat-label {
+    width: 100%;
+    max-width: 122.72px;
+    font-size: 20px;
+    color: #D9D9D9;
+    height: 58px;
+}
+
+.starbuck__promo-discount {
+        /* writing-mode: vertical-lr;
+    transform: rotate(180deg); */
+    width: 140px;
+    height: 140px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 0 L65 25 L95 25 L70 50 L85 95 L50 75 L15 95 L30 50 L5 25 L35 25 Z' fill='%2335C66B'/%3E%3C/svg%3E") center/contain no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.starbucks__promo-discount {
+    background: linear-gradient(135deg, #35C66B, #237249);
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 20px;
+    border-radius: 50%;
+    width: 190px;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.starbucks__content-img{
+    height: 590px;
+}
+
+.starbucks__features::before {
+    content: '';
+    position: absolute;
+    width: 1029px;
+    height: 372px;
+    background: linear-gradient(90deg, 
+        #FFFFFF 4%, 
+        #E5E5E5 64%, 
+        #FBFBFB 89%);
+    border-radius: 46px;
+    z-index: 1;
+}
+
+.starbucks__features {
+    padding: 88px 0 0 117px;
+    align-items: flex-start;
+}
+
+.starbucks__features-title {
+    /* flex-shrink: 0; */
+        z-index: 3;
+}
+
+.starbucks__features-text {
+    font-size: 32px;
+    max-width: 99px;
+    color: #f5f;
+    text-align: center;    
+}
+
+.starbucks__feature-items {
+    display: flex;
+    padding: 40px 78px 36px 78px;
+    gap: 128px;
+
+}
+
+
+.starbucks__feature-icon {
+    width: 148px;
+    height: 148px;
+    background: linear-gradient(90deg, #35C66B, #237249);
+    box-shadow: 0 0 20px 5px #121517;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    z-index: 4;
+}
+
+.starbucks__icon-img {
+    z-index: 5;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.starbucks__feature-text {
+    z-index: 3;
+}
+
+.starbucks__feature-item h4 {
+    color: #121517;
+    font-size: 32px;
+    line-height: 52px;
+    margin-bottom: 4px;
+}
+
+.starbucks__feature-item p {
+    width: 100%;
+    max-width: 216px;
+    font-size: 20.13px;
+    color: #121517;
+    height: 66px;
+}
+
+
+/* Стили для Footer */
+
+.footer{
+    background-color: #0B0C0D;
+}
+
+.footer .container {
+    padding: 38px 136px 36px 121px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__info{
+    margin-left: 69px;
+}
+
+.footer__info-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 37px;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 41px;
+    display: flex;
+    background: linear-gradient(90deg, #35C66B, #237249);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 176.89px;
+}
+
+.footer__info-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 32px;
+    display: flex;
+    background: linear-gradient(90deg, #35C66B, #237249);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer__nav{
+    display: flex;
+
+}
+
+.footer__nav-lists{
+    gap: 82px;
+    list-style: none;
+}
+
+.footer__nav-item{
+    margin-bottom: 8px;
+}
+
+.nav__link-title{
+    color: #BBB3B3;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    height: 24px;
+    line-height: 24px;
+    display: block;
+}
+
+.nav__link-title:hover{
+    opacity: 0.43;
+
+}
+
+.nav__link {
+    color: #BBB3B3;
+    opacity: 0.43;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+    text-decoration: none;
+    height: 23px;
+    line-height: 23px;
+    display: block;
+}
+
+.nav__link:hover {
+    opacity: 1;
+}
+
+
+/* Адаптивность */
+
+
+@media (max-width: 992px) {
+    .container {
+        padding: 0 40px;
+    }
+    
+    .starbucks__info {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .starbucks__promo {
+        min-width: 100%;
+        max-width: 400px;
+    }
+    
+    .starbucks__features {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .starbucks__features-text {
+        writing-mode: horizontal-tb;
+        transform: none;
+    }
+    
+    .header .container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+    
+    .header__logo {
+        margin-right: 0;
+    }
+    
+    .nav__lists {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .header {
+        height: auto;
+        position: relative;
+    }
+    
+    .starbucks-section {
+        margin-top: 0;
+        padding: 60px 0 40px;
+    }
+    
+    .starbucks__title {
+        font-size: 36px;
+    }
+    
+    .starbucks__stats {
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+    
+    .starbucks__stat-item {
+        text-align: center;
+        flex: 1;
+        min-width: 120px;
+    }
+    
+    .starbucks__buttons {
+        align-items: center;
+    }
+    
+    .starbucks__button-primary,
+    .starbucks__button-secondary {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .nav__lists {
+        gap: 30px;
+    }
+    
+    .header__logo {
+        font-size: 32px;
+    }
+    
+    .nav__link {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 428px) {
+    .container {
+        padding: 0 25px;
+    }
+    
+    .starbucks__promo {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .starbucks__stats {
+        gap: 20px;
+    }
+    
+    .starbucks__stat-number {
+        font-size: 28px;
+    }
+    
+    .nav__lists {
+        gap: 20px;
+    }
+    
+    .header__logo {
+        font-size: 28px;
+    }
+    
+    .nav__link {
+        font-size: 14px;
+    }
+    
+    .starbucks__feature-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
 }
