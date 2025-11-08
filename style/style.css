@@ -296,6 +296,213 @@ body {
     height: 66px;
 }
 
+/* Стили для секции delicious */
+.delicious-section{
+    background-image: url('/images/lines2.png');
+    padding: 100px 515px 0 61px;
+}
+
+.delicious-section .container{
+    padding: 69px 126px 31px 92px;
+    display: flex;
+        /* background-image: url('/images/lines2.png'); */
+
+}
+
+.delicious__wrapper {
+    display: flex;
+    margin-right: 289px;
+    width: 548px;
+    height: 755px;
+}
+
+
+.delicious__image-figure {
+    padding: 71px 83px 0 0;
+    width: 465px;
+    height: 684px;
+    content: '';
+    position: absolute;
+    background-color: #237249;
+    z-index: 1;
+
+}
+
+.delicious__image {
+    padding: 35px 38px 36px 45px;
+    width: 465px;
+    height: 684px;
+    z-index: 2;
+}
+
+.delicious__wrapper-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 457px;
+    height: 661px;
+    gap: 63px;
+}
+
+.delicious__title {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 80.5px;
+    height: 161px;
+    max-width: 411px;
+}
+
+.delicious__title span {
+    background: linear-gradient(90deg, #35C66B, #237249);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.delicious__description {
+    font-size: 20px;
+    color: #D9D9D9;
+    line-height: 33px;
+    height: 99px;
+    max-width: 100%;
+}
+
+.delicious__cooking {
+    position: relative;
+    background-image: url('/images/cooking.png');
+    height: 275px;
+    width: 447px;
+    padding: 100px 60px 100px 61px;
+    text-align: center;
+}
+
+.delicious__cooking-button {
+    background: linear-gradient(90deg, #35C66B, #237249);
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: 600;
+    padding: 20px 42px 20px 43px;
+    height: 75px;
+    width: 326px;
+    cursor: pointer;
+    border-radius: 82.83px;
+}
+
+.delicious__cooking-triangle {
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 20px solid #fff;
+    /* background-color: none; */
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+    align-items: center;
+}
+
+.delicious__cooking-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Стили для Contacts */
+.contacts .container{
+    padding: 49px 126px 31px 92px;
+    display: flex;
+}
+
+.contacts__wrapper-text {
+    flex: 1;
+    width: 391px;
+    height: 512px;
+    margin-right: 375px;
+}
+
+.contacts__title {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 88px;
+    height: 176px;
+    max-width: 365px;
+    margin-bottom: 52px;
+}
+
+.contacts__title span {
+    background: linear-gradient(90deg, #35C66B, #237249);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contacts__text {
+    font-size: 20px;
+    color: #D9D9D9;
+    line-height: 33px;
+    height: 99px;
+    max-width: 387px;
+    margin-bottom: 56px;
+}
+
+.contacts__info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.contacts__info-line{
+    display: flex;
+}
+
+.contacts__line-img1{
+    margin-right: 14px;
+}
+
+.contacts__line-img2{
+    margin-right: 24px;
+}
+
+.contacts__line-text{
+    font-size: 32px;
+    color: #D9D9D9;
+    line-height: 42px;
+    font-weight: 500;
+}
+
+.contacts__wrapper {
+    display: flex;
+    margin-right: 289px;
+    width: 548px;
+    height: 755px;
+}
+
+.contacts__image-figure {
+    padding: 71px 83px 0 0;
+    width: 465px;
+    height: 684px;
+    content: '';
+    position: absolute;
+    background-color: #237249;
+    z-index: 1;
+
+}
+
+.contacts__image {
+    padding: 35px 38px 36px 45px;
+    width: 465px;
+    height: 684px;
+    z-index: 2;
+}
+
+.contacts{
+    background-image: url('/images/lines3.png');
+    padding: 100px 139px 114.39px 130px;
+}
+
+
 
 /* Стили для Footer */
 
@@ -307,11 +514,15 @@ body {
     padding: 38px 136px 36px 121px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .footer__info{
-    margin-left: 69px;
+    margin-right: 69px;
+    /* flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 176.89px; */
+
 }
 
 .footer__info-logo {
@@ -340,12 +551,13 @@ body {
 }
 
 .footer__nav{
+    padding-top: 7px;
     display: flex;
-
+    gap: 82px;
+    margin-right: 108px;
 }
 
 .footer__nav-lists{
-    gap: 82px;
     list-style: none;
 }
 
@@ -353,22 +565,7 @@ body {
     margin-bottom: 8px;
 }
 
-.nav__link-title{
-    color: #BBB3B3;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    text-decoration: none;
-    height: 24px;
-    line-height: 24px;
-    display: block;
-}
-
-.nav__link-title:hover{
-    opacity: 0.43;
-
-}
-
-.nav__link {
+.footer__nav-link {
     color: #BBB3B3;
     opacity: 0.43;
     font-family: 'Montserrat', sans-serif;
@@ -379,12 +576,321 @@ body {
     display: block;
 }
 
-.nav__link:hover {
+.footer__nav-link:hover {
     opacity: 1;
 }
 
 
+.footer__link-title{
+    color: #BBB3B3;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    height: 24px;
+    line-height: 24px;
+    display: block;
+}
+
+.footer__link-title:hover{
+    opacity: 0.43;
+
+}
+
+.footer__links{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 128.89px;
+}
+
+.footer__link-main{
+    height: 84px;
+    width: 84px;
+}
+
+.footer__link-social{
+    /* height: 46.11px;
+    width: 46.11px; */
+    padding-left: 37.89px;
+}
+
+
 /* Адаптивность */
+/* Адаптивность для секции delicious */
+
+@media (max-width: 1200px) {
+    .delicious-section {
+        padding: 80px 200px 0 40px;
+    }
+    
+    .delicious-section .container {
+        padding: 50px 60px 25px 60px;
+        flex-direction: column;
+        gap: 60px;
+    }
+    
+    .delicious__wrapper {
+        margin-right: 0;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+    
+    .delicious__image-figure,
+    .delicious__image {
+        width: 400px;
+        height: 580px;
+    }
+    
+    .delicious__wrapper-text {
+        width: 100%;
+        height: auto;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .delicious__title {
+        font-size: 60px;
+        line-height: 1.2;
+        height: auto;
+        max-width: 500px;
+    }
+    
+    .delicious__description {
+        font-size: 18px;
+        line-height: 1.6;
+        height: auto;
+        max-width: 600px;
+    }
+    
+    .delicious__cooking {
+        width: 100%;
+        max-width: 400px;
+        height: 200px;
+        padding: 60px 40px;
+    }
+    
+    .delicious__cooking-button {
+        font-size: 20px;
+        padding: 15px 30px;
+        height: 60px;
+        width: 280px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .delicious-section {
+        padding: 40px 50px 0 20px;
+    }
+    
+    .delicious-section .container {
+        padding: 30px 20px 15px 20px;
+        gap: 40px;
+    }
+    
+    .delicious__wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .delicious__image-figure {
+        padding: 40px 50px 0 0;
+        width: 280px;
+        height: 400px;
+    }
+    
+    .delicious__image {
+        padding: 20px 25px 20px 30px;
+        width: 280px;
+        height: 400px;
+    }
+    
+    .delicious__title {
+        font-size: 36px;
+        line-height: 1.3;
+        max-width: 300px;
+    }
+    
+    .delicious__description {
+        font-size: 14px;
+        line-height: 1.5;
+        max-width: 400px;
+    }
+    
+    .delicious__cooking {
+        height: 150px;
+        padding: 40px 20px;
+        max-width: 320px;
+    }
+    
+    .delicious__cooking-button {
+        font-size: 16px;
+        padding: 10px 20px;
+        height: 50px;
+        width: 220px;
+    }
+    
+    .delicious__cooking-triangle {
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 12px solid #fff;
+    }
+}
+
+@media (max-width: 428px) {
+    .delicious-section {
+        padding: 30px 20px 0 15px;
+    }
+    
+    .delicious-section .container {
+        padding: 20px 15px 10px 15px;
+        gap: 30px;
+    }
+    
+    .delicious__image-figure {
+        padding: 30px 35px 0 0;
+        width: 220px;
+        height: 320px;
+    }
+    
+    .delicious__image {
+        padding: 15px 20px 15px 25px;
+        width: 220px;
+        height: 320px;
+    }
+    
+    .delicious__title {
+        font-size: 28px;
+        max-width: 250px;
+    }
+    
+    .delicious__description {
+        font-size: 13px;
+        max-width: 300px;
+    }
+    
+    .delicious__cooking {
+        height: 120px;
+        padding: 30px 15px;
+        max-width: 280px;
+    }
+    
+    .delicious__cooking-button {
+        font-size: 14px;
+        padding: 8px 15px;
+        height: 45px;
+        width: 200px;
+    }
+    
+    .delicious__cooking-triangle {
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        border-left: 10px solid #fff;
+    }
+}
+
+/* Адаптивность для Footer */
+@media (max-width: 1200px) {
+    .footer .container {
+        padding: 30px 80px 25px 80px;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    
+    .footer__info {
+        margin-left: 0;
+    }
+    
+    .footer__info-logo {
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer .container {
+        padding: 25px 50px 20px 50px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer__nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    
+    .footer__info-logo {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer .container {
+        padding: 20px 30px 15px 30px;
+        gap: 30px;
+    }
+    
+    .footer__nav {
+        gap: 30px;
+    }
+    
+    .footer__nav-lists {
+        gap: 40px;
+    }
+    
+    .footer__info-logo {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    
+    .footer__info-number {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 428px) {
+    .footer .container {
+        padding: 15px 20px 10px 20px;
+        gap: 25px;
+    }
+    
+    .footer__nav {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .footer__nav-lists {
+        gap: 20px;
+    }
+    
+    .footer__info-logo {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .footer__info-number {
+        font-size: 18px;
+    }
+    
+    .nav__link-title,
+    .nav__link {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (max-width: 992px) {
