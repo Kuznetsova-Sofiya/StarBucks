@@ -12,8 +12,9 @@ body {
 }
 
 .container {
-    max-width: 1512px;
-    padding: 0 130px;
+    max-width: 1302px;
+    padding: 0 25px;
+    margin: 0 auto;
 }
 
 /* Стили для шапки */
@@ -22,18 +23,13 @@ body {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
-    height: 105px;
-    display: flex;
-    align-items: center;
+    padding: 48px 0;
 }
 
 .header .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    max-width: 648px;
-
+    column-gap: 94px;
 }
 
 .header__logo {
@@ -42,9 +38,6 @@ body {
     font-weight: 700;
     text-decoration: none;
     line-height: 41px;
-    width: 195px;
-    display: flex;
-    margin-right: 94px;
     background: linear-gradient(90deg, #35C66B, #237249);
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -61,9 +54,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 19px;
     text-decoration: none;
-    height: 23px;
     line-height: 23px;
-    display: block;
 }
 
 .nav__link:hover {
@@ -74,33 +65,23 @@ body {
 /* Стили для секции StarBucks */
 .starbucks-section {
     background-color: #121517;
-    color: white;
-    position: relative;
-    margin-top: 105px;
-}
-
-.starbucks-section .container{
-    padding: 0 184.65px 31px 130px;
+    margin-top: 136px;
 }
 
 .starbucks__info {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     gap: 155px;
-    margin-bottom: 13px;
-}
-
-.starbucks__info-content {
-    padding: 64px 0 0 0;
+    margin-bottom: 98px;
+    padding: 21px;
 }
 
 .starbucks__title {
     font-size:  80px;
     font-weight: 800;
-    margin-bottom: 54px;
-    line-height: 109.5%;/*??????????????????*/
-    position: relative;
+    margin-bottom: 59px;
+    line-height: 109.5%;
 }
 
 .gradient-text {
@@ -116,7 +97,7 @@ body {
     font-size: 20px;
     color: #D9D9D9;
     margin-bottom: 54px;
-    height: 66px;
+    line-height: 32.7px;
 }
 
 .starbucks__buttons {
@@ -130,6 +111,7 @@ body {
     color: #fff;
     border: none;
     font-size: 24px;
+    line-height: 35.16px;
     padding: 20px 79.38px 19.65px 78px;
     font-weight: 639;
     cursor: pointer;
@@ -151,6 +133,7 @@ body {
     color: #D9D9D9;
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
+    line-height: 35.16px;
     padding: 20px 53.71px 19.65px 54.26px;
     cursor: pointer;
     border-radius: 82.83px;
@@ -168,8 +151,8 @@ body {
     gap: 46.02px;
 }
 
-.starbucks__stat-item {
-    text-align: left;
+.starbucks__stat-item{
+    max-width: 122.72px;
 }
 
 .starbucks__stat-number {
@@ -179,29 +162,71 @@ body {
 }
 
 .starbucks__stat-label {
-    width: 100%;
     max-width: 122.72px;
     font-size: 20px;
     color: #D9D9D9;
-    height: 58px;
 }
 
-.starbuck__promo-discount {
-        /* writing-mode: vertical-lr;
-    transform: rotate(180deg); */
-    width: 140px;
-    height: 140px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 0 L65 25 L95 25 L70 50 L85 95 L50 75 L15 95 L30 50 L5 25 L35 25 Z' fill='%2335C66B'/%3E%3C/svg%3E") center/contain no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 16px;
+.starbucks__promo{
+    position: relative;
+    aspect-ratio: 428 / 628;
+    max-width: 472px;
+    width: 100%;
+    transform: translate(-51px, 2px);
 }
+
+/* .starbucks__promo-discount {
+    width: 190px;
+    height: 190px;
+    position: relative;
+    position: absolute;
+    text-align: center;
+} */
 
 .starbucks__promo-discount {
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    text-align: center;
+
+    /* position: relative; */
+    z-index: 2;
+    top: 20px;    /* Настройте по необходимости */
+    right: 20px;  /* Настройте по необходимости */
+}
+
+.starbucks__discount-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.starbucks__discount-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+        font-family: 'Montserrat', sans-serif;
+    line-height: 48px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.starbucks__promo-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+
+.starbucks__content-img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* .starbucks__promo-discount {
     background: linear-gradient(135deg, #35C66B, #237249);
     color: #fff;
     font-size: 24px;
@@ -215,47 +240,45 @@ body {
     justify-content: center;
     position: relative;
     flex-shrink: 0;
-}
-
-.starbucks__content-img{
-    height: 590px;
-}
-
-.starbucks__features::before {
-    content: "";
-    position: absolute;
-    width: 1029px;
-    height: 372px;
-    background: linear-gradient(90deg, 
-        #FFFFFF 4%, 
-        #E5E5E5 64%, 
-        #FBFBFB 89%);
-    border-radius: 46px;
-    z-index: 1;
-}
+} */
 
 .starbucks__features {
-    padding: 88px 0 0 117px;
-    align-items: flex-start;
+    position: relative;
+    max-width: 1029px;
+    margin: 0 auto;
 }
 
 .starbucks__features-title {
-    /* flex-shrink: 0; */
-        z-index: 3;
+    z-index: 3;
+    width: 154px;
+    height: 154px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    transform: translate(-37%, -32%);
+    left: 0;
+    top: 0;
 }
 
 .starbucks__features-text {
     font-size: 32px;
-    max-width: 99px;
-    color: #f5f;
-    text-align: center;    
+    color: #fff;
+    text-align: center;  
+    position: relative;
+    font-weight: 500;
+    margin-bottom: 32px;
+    line-height: 30px;  
 }
 
 .starbucks__feature-items {
     display: flex;
     padding: 40px 78px 36px 78px;
     gap: 128px;
-
+    background: linear-gradient(90deg, 
+        #FFFFFF 4%, 
+        #E5E5E5 64%, 
+        #FBFBFB 89%);
+    border-radius: 46px;
 }
 
 
@@ -268,33 +291,32 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
-    z-index: 4;
+    margin: 0 auto 24px;
 }
 
 .starbucks__icon-img {
-    z-index: 5;
-    align-items: center;
-    flex-shrink: 0;
+    width: 111%;
+    height: 111%;
+    object-fit: contain;
+    object-position: center;
 }
 
 .starbucks__feature-text {
-    z-index: 3;
+    text-align: center;
 }
 
-.starbucks__feature-item h4 {
+.starbucks__feature-item h3 {
     color: #121517;
     font-size: 32px;
     line-height: 52px;
     margin-bottom: 4px;
+    font-weight: 500;
 }
 
 .starbucks__feature-item p {
-    width: 100%;
-    max-width: 216px;
     font-size: 20.13px;
     color: #121517;
-    height: 66px;
+    line-height: 163%;
 }
 
 /* Стили для секции delicious */
