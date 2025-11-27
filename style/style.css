@@ -66,6 +66,7 @@ body {
 .starbucks-section {
     background-color: #121517;
     margin-top: 136px;
+    margin-bottom: 100px;
 }
 
 .starbucks__info {
@@ -165,6 +166,7 @@ body {
     max-width: 122.72px;
     font-size: 20px;
     color: #D9D9D9;
+    line-height: 1.4;
 }
 
 .starbucks__promo{
@@ -184,10 +186,12 @@ body {
 } */
 
 .starbucks__promo-discount {
-    width: 210px;
-    height: 210px;
+    width: 190px;
+    height: 190px;
     position: absolute;
     text-align: center;
+    
+    transform: rotate(130deg);
 
     /* position: relative; */
     z-index: 2;
@@ -205,12 +209,11 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-45px, -45px) rotate(-150deg);
     font-weight: 500;
-        font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 48px;
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 44px;
     color: #fff;
 }
 
@@ -266,7 +269,6 @@ body {
     text-align: center;  
     position: relative;
     font-weight: 500;
-    margin-bottom: 32px;
     line-height: 30px;  
 }
 
@@ -322,50 +324,82 @@ body {
 /* Стили для секции delicious */
 .delicious-section{
     background-image: url('/images/lines2.png');
-    padding: 100px 515px 0 61px;
+    margin-bottom: 100px;
+    background-size: 73%;
+    background-position: 113% -46%;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .delicious-section .container{
-    padding: 69px 126px 31px 92px;
     display: flex;
-        /* background-image: url('/images/lines2.png'); */
-
+    align-items: center;
 }
 
 .delicious__wrapper {
     display: flex;
-    margin-right: 289px;
-    width: 548px;
-    height: 755px;
+    margin-right: auto;
+    max-width: 548px;
+    width: 100%;
+    position: relative;
+    aspect-ratio: 530/755;
 }
 
-
-.delicious__image-figure {
-    padding: 71px 83px 0 0;
-    width: 465px;
-    height: 684px;
+.delicious__wrapper::before {
     content: '';
-    position: absolute;
     background: linear-gradient(45deg, 
         #237249 0%, 
         #237249 90%, 
-        #121517 90%);
-    z-index: 1;
+        #121517 90%);    
+    display: block;
+    width: 82%;
+    height: 88%;
+    position: absolute;
+    left: 0;
+    top: 72px;
 }
 
-.delicious__image {
-    padding: 35px 38px 36px 45px;
-    width: 465px;
-    height: 684px;
-    z-index: 2;
+/* ............................. */
+.delicious__features-title {
+    width: 190px;
+    height: 190px;
+    position: absolute;
+    text-align: center;
+    z-index: 3;
+    transform: translate(300px, 0px);
+}
+
+.delicious__discount-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.delicious__features-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40px, -40px);
+    font-size: 32px; /* Немного меньше, так как блок 154px vs 190px */
+    color: white;
+    text-align: center;
+    line-height: 86.5%;
+}
+/* ............................. */
+
+
+.delicious__image-figure {
+    width: 103%;
+    position: absolute;
+    transform: translate(-30px, -21px);
+    aspect-ratio: 449/665;
 }
 
 .delicious__wrapper-text {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    width: 457px;
-    height: 661px;
+    max-width: 519px;
+    width: 100%;
     gap: 63px;
 }
 
@@ -373,8 +407,6 @@ body {
     font-size: 80px;
     font-weight: 700;
     line-height: 80.5px;
-    height: 161px;
-    max-width: 411px;
 }
 
 .delicious__title span {
@@ -388,17 +420,17 @@ body {
     font-size: 20px;
     color: #D9D9D9;
     line-height: 33px;
-    height: 99px;
-    max-width: 100%;
 }
 
 .delicious__cooking {
-    position: relative;
     background-image: url('/images/cooking.png');
-    height: 275px;
-    width: 447px;
-    padding: 100px 60px 100px 61px;
-    text-align: center;
+    padding: 30px;
+    aspect-ratio: 519/275;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
 }
 
 .delicious__cooking-button {
@@ -409,10 +441,14 @@ body {
     line-height: 35px;
     font-weight: 600;
     padding: 20px 42px 20px 43px;
-    height: 75px;
-    width: 326px;
     cursor: pointer;
     border-radius: 82.83px;
+    max-width: 379px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 14px;
 }
 
 .delicious__cooking-triangle {
@@ -436,28 +472,23 @@ body {
 
 
 /* Стили для Products */
-.products-section .container {
-    /* padding: 89px 238px 64px 0; */
-        padding: 89px 238px 31px 0;
-
+section.products-section{
+    margin-bottom: 100px;
 }
 
 .products__header {
     display: flex;
     margin-bottom: 54px;
     max-width: 800px;
-    margin-left: 145px;
-    text-align: center;
+    column-gap: 72px;
 }
 
 .products__title {
     font-weight: 700;
     font-size: 80px;
     line-height: 89.79px;
-    height: 164px;
     max-width: 392px;
     color: #fff;
-    margin-right: 72px;
 }
 
 .products__title span{
@@ -469,10 +500,8 @@ body {
 
 .products__description {
     padding: 17px 0 15px 0;
-    /* padding: 17px  15px 72px; */
     font-size: 20px;
     line-height: 32.7px;
-    height: 132px;
     max-width: 444px;
     color: #D9D9D9;
 }
@@ -480,9 +509,6 @@ body {
 .products__cards {
     display: flex;
     gap: 54px;
-    max-width: 1466px;
-    padding-top: 9px;
-    transform: translateX(-207px);
 }
 
 .product-card {
@@ -494,12 +520,8 @@ body {
         #DADADA) border-box;
     border: 1.5px solid transparent;
     border-radius: 29px;
-    padding: 54px 31px 32.93px 30px;
-    height: 554px;
+    padding: 63px 31px 30px 32.93px;
     position: relative;
-    display: flex;
-    align-self: center;
-    justify-content: center;
 }
 
 .product-card:hover {
@@ -518,28 +540,23 @@ body {
     border-radius: 50%;
     position: absolute;
     content: "";
-    flex-shrink: 0;
-    z-index: 2;
+    left: 50%;
+    top: 64px;
+    transform: translateX(-50%);
 }
 
 .product-card__img{
-    z-index: 3;
     position: absolute;
-    transform: translateY(-75px);
-    /* transform: rotate(356deg);
-    transform-origin: center center; Точка вращения по центру */
+    transform: translate(-50%, -73px);
+    width: 321px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    left: 50%;
 }
 
 .product-card__content {
     margin-top: 217px;
-    flex: 1;
-    width: 216px;
-    height: 250.07px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-self: center;
-    align-items: center;
+    max-width: 216px;
     text-align: center;
 }
 
@@ -547,24 +564,23 @@ body {
     font-size: 32px;
     line-height: 38px;
     font-weight: 500;
-    margin-bottom: 4px;
+    margin-bottom: 11px;
     color: #fff;
 }
 
 .product-card__description {
     font-size: 20.13px;
     line-height: 32.9px;/*лиюо 1.635 или 33px*/
-    height: 66px;
     color: #D9D9D9;
-    max-width: 216px;
-    margin-bottom: 7px;
+    margin-bottom: 13px;
 }
 
 .product-card__specifications{
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 26px;
     gap: 35px;
-    align-items: center;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .product-card__price {
@@ -575,7 +591,6 @@ body {
 }
 
 .product-card__volume {
-    margin-top: 13px;
     font-size: 20.13px;
     line-height: 23.48px;
     color: #D9D9D9;
@@ -591,8 +606,8 @@ body {
     font-size: 17.3px;
     line-height: 25px;
     cursor: pointer;
-    width: 186px;
-    height: 54.07px;
+    max-width: 186px;
+    width: 100%;
 }
 
 .product-card__button:hover {
@@ -986,6 +1001,34 @@ body {
     width: 477px;
     height: 617px;
 }
+
+/* ............................. */
+.contacts__features-title {
+    width: 190px;
+    height: 190px;
+    position: absolute;
+    text-align: center;
+    z-index: 3;
+    transform: translate(-80px, -60px);
+}
+
+.contacts__discount-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.contacts__features-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40px, -45px);
+    font-size: 32px; /* Немного меньше, так как блок 154px vs 190px */
+    color: white;
+    text-align: center;
+    line-height: 86.5%;
+}
+/* ............................. */
 
 .contacts__image-figure {
     padding: 96.4px 0 0 123.08px;
