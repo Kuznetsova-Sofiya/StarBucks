@@ -473,7 +473,7 @@ body {
 
 /* Стили для Products */
 section.products-section{
-    margin-bottom: 100px;
+    margin-bottom: 68px;
 }
 
 .products__header {
@@ -676,19 +676,15 @@ section.products-section{
 /* Стили для Events */
 .events-section {
     background-image: url('/images/lines2.png');
-    /* transform: translateX(-200); */
-}
-
-.events-section .container{
-    padding: 69px 130px 31px 129px;
+    margin-bottom: 147px;
 }
 
 .events__header {
     display: flex;
-    gap: 72px;
-    margin-left: 358px;
-    width: 895px;
-    height: 176px;
+    gap: 77px;
+    margin-left: auto;
+    margin-bottom: 54px;
+    justify-content: flex-end;
 }
 
 .events__description {
@@ -696,8 +692,8 @@ section.products-section{
     font-size: 20px;
     color: #D9D9D9;
     line-height: 32.7px;
-    height: 99px;
-    max-width: 457px;
+    max-width: 455px;
+    letter-spacing: -0.02em;
 }
 
 .events__title {
@@ -705,8 +701,8 @@ section.products-section{
     line-height: 87.6px;
     font-weight: 700;
     color: #fff;
-    height: 176px;
     max-width: 366px;
+    letter-spacing: -0.03em;
 }
 
 
@@ -721,8 +717,6 @@ section.products-section{
     display: flex;
     flex-direction: column;
     gap: 24px;
-    height: 544px;
-    max-width: 1253px;
 }
 
 .events__grid-first{
@@ -739,8 +733,9 @@ section.products-section{
 }
 
 .events__grid-first .event-card {
-    width: 614.55px;
-    padding: 44px 0 27.35px 28.55px;
+    max-width: 614.55px;
+    width: 100%;
+    padding: 44px 28.55px 27.35px;
     border-radius: 30px;
 }
 
@@ -762,18 +757,14 @@ section.products-section{
     font-weight: 500;
     color: #fff;
     line-height: 34.72px;
-    height: 70px;
     margin-bottom: 44px;
-    /* margin-left: 3px; */
 }
 
 .event-card__button {
     background: linear-gradient(90deg, #35C66B, #237249);
     border: none;
-    height: 74.65px;
-    width: 167.97px;
     border-radius: 82.83px;
-    padding: 20px 51.71px 19.65px 54.26px;
+    padding: 20px 51.71px;
     font-size: 24px;
     line-height: 35.16px;
     color: #D9D9D9;
@@ -793,8 +784,9 @@ section.products-section{
 }
 
 .events__grid-second .event-card {
-    width: 401.47px;
-    padding: 44px 0 22.35px 23.74px;
+    max-width: 401.47px;
+    width: 100%;
+    padding: 44px 28.74px 22.35px;
     border-radius: 30px;
 }
 
@@ -940,16 +932,14 @@ section.products-section{
 
 .contacts__wrapper-text {
     flex: 1;
-    width: 391px;
-    height: 512px;
-    margin-right: 375px;
+    max-width: 391px;
+    margin-right: auto;
 }
 
 .contacts__title {
     font-size: 80px;
     font-weight: 700;
     line-height: 88px;
-    height: 176px;
     max-width: 365px;
     margin-bottom: 52px;
 }
@@ -965,13 +955,12 @@ section.products-section{
     font-size: 20px;
     color: #D9D9D9;
     line-height: 33px;
-    height: 99px;
     max-width: 387px;
-    margin-bottom: 56px;
+    margin-bottom: 55px;
+    letter-spacing: -0.02em;
 }
 
 .contacts__info{
-    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 28px;
@@ -979,6 +968,8 @@ section.products-section{
 
 .contacts__info-line{
     display: flex;
+    column-gap: 14px;
+    align-items: center;
 }
 
 .contacts__line-img1{
@@ -998,8 +989,9 @@ section.products-section{
 
 .contacts__card {
     display: flex;
-    width: 477px;
-    height: 617px;
+    position: relative;
+    transform: translate(0, 27px);
+    aspect-ratio: 390/548;
 }
 
 /* ............................. */
@@ -1053,7 +1045,7 @@ section.products-section{
 
 .contacts{
     background-image: url('/images/lines3.png');
-    padding: 100px 139px 114.39px 130px;
+    margin-bottom: 135px;
 }
 
 
@@ -1210,21 +1202,16 @@ section.products-section{
 
 .footer{
     background-color: #0B0C0D;
+    padding: 38px 0 46px;
 }
 
 .footer .container {
-    padding: 38px 136px 36px 121px;
     display: flex;
     justify-content: space-between;
 }
 
 .footer__info{
-    margin-right: 69px;
-    /* flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 176.89px; */
-
+    margin-right: 66px;
 }
 
 .footer__info-logo {
@@ -1273,7 +1260,6 @@ section.products-section{
     font-family: 'Montserrat', sans-serif;
     font-size: 19px;
     text-decoration: none;
-    height: 23px;
     line-height: 23px;
     display: block;
 }
@@ -1288,7 +1274,6 @@ section.products-section{
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     text-decoration: none;
-    height: 24px;
     line-height: 24px;
     display: block;
 }
@@ -1305,15 +1290,24 @@ section.products-section{
     gap: 128.89px;
 }
 
-.footer__link-main{
-    height: 84px;
+a.footer__link{
     width: 84px;
+    height: 84px;
+    display: flex;
+    margin-left: auto;
+}
+
+.footer__link-main{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 
 .footer__link-social{
-    /* height: 46.11px;
-    width: 46.11px; */
     padding-left: 37.89px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 
