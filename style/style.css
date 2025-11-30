@@ -1,5 +1,1722 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121517;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1302px;
+    padding: 0 25px;
+    margin: 0 auto;
+}
+
+/* Стили для шапки */
+.header {
+    background-color: #121517;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 48px 0;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    column-gap: 94px;
+}
+
+.header__logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 37px;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 41px;
+    background: linear-gradient(90deg, #35C66B, #237249);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav__lists {
+    display: flex;
+    list-style: none;
+    gap: 94px;
+}
+
+.nav__link {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+    text-decoration: none;
+    line-height: 23px;
+}
+
+.nav__link:hover {
+    color: #35C66B;
+}
+
+
+/* Стили для секции StarBucks */
+.starbucks-section {
+    background-color: #121517;
+    margin-top: 136px;
+    margin-bottom: 100px;
+}
+
+.starbucks__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 155px;
+    margin-bottom: 98px;
+    padding: 21px;
+}
+
+.starbucks__title {
+    font-size:  80px;
+    font-weight: 800;
+    margin-bottom: 59px;
+    line-height: 109.5%;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #35C66B, #237249);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.starbucks__description {
+    width: 100%;
+    max-width: 572px;
+    font-size: 20px;
+    color: #D9D9D9;
+    margin-bottom: 54px;
+    line-height: 32.7px;
+}
+
+.starbucks__buttons {
+    display: flex;
+    gap: 16.36px;
+    margin-bottom: 54px;
+}
+
+.starbucks__button-primary {
+    background: linear-gradient(90deg, #35C66B, #237249);
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    line-height: 35.16px;
+    padding: 20px 79.38px 19.65px 78px;
+    font-weight: 639;
+    cursor: pointer;
+    border-radius: 82.83px;
+    /* min-width: 223.41px; */
+}
+
+.starbucks__button-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    background: linear-gradient(0deg, #35C66B, #237249);
+}
+
+.starbucks__button-secondary {
+    background: 
+        linear-gradient(#121517, #121517) padding-box,
+        linear-gradient(160deg, #DADADA, #121517) border-box;
+    border: 1px solid transparent;
+    color: #D9D9D9;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    line-height: 35.16px;
+    padding: 20px 53.71px 19.65px 54.26px;
+    cursor: pointer;
+    border-radius: 82.83px;
+    /* min-width: 112.56px; */
+}
+
+.starbucks__button-secondary:hover {
+    color: #35C66B;
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.starbucks__stats {
+    display: flex;
+    gap: 46.02px;
+}
+
+.starbucks__stat-item{
+    max-width: 122.72px;
+}
+
+.starbucks__stat-number {
+    font-size: 62px;
+    line-height: 68px;
+    color: #fff;
+}
+
+.starbucks__stat-label {
+    max-width: 122.72px;
+    font-size: 20px;
+    color: #D9D9D9;
+    line-height: 1.4;
+}
+
+.starbucks__promo{
+    position: relative;
+    aspect-ratio: 428 / 628;
+    max-width: 472px;
+    width: 100%;
+    transform: translate(-51px, 2px);
+}
+
+/* .starbucks__promo-discount {
+    width: 190px;
+    height: 190px;
+    position: relative;
+    position: absolute;
+    text-align: center;
+} */
+
+.starbucks__promo-discount {
+    width: 190px;
+    height: 190px;
+    position: absolute;
+    text-align: center;
+    
+    transform: rotate(130deg);
+
+    /* position: relative; */
+    z-index: 2;
+    top: 20px;    /* Настройте по необходимости */
+    right: 20px;  /* Настройте по необходимости */
+}
+
+.starbucks__discount-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.starbucks__discount-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45px, -45px) rotate(-150deg);
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 48px;
+    font-size: 44px;
+    color: #fff;
+}
+
+.starbucks__promo-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+
+.starbucks__content-img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* .starbucks__promo-discount {
+    background: linear-gradient(135deg, #35C66B, #237249);
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 20px;
+    border-radius: 50%;
+    width: 190px;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+} */
+
+.starbucks__features {
+    position: relative;
+    max-width: 1029px;
+    margin: 0 auto;
+}
+
+.starbucks__features-title {
+    z-index: 3;
+    width: 154px;
+    height: 154px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    transform: translate(-37%, -32%);
+    left: 0;
+    top: 0;
+}
+
+.starbucks__features-text {
+    font-size: 32px;
+    color: #fff;
+    text-align: center;  
+    position: relative;
+    font-weight: 500;
+    line-height: 30px;  
+}
+
+.starbucks__feature-items {
+    display: flex;
+    padding: 40px 78px 36px 78px;
+    gap: 128px;
+    background: linear-gradient(90deg, 
+        #FFFFFF 4%, 
+        #E5E5E5 64%, 
+        #FBFBFB 89%);
+    border-radius: 46px;
+}
+
+
+.starbucks__feature-icon {
+    width: 148px;
+    height: 148px;
+    background: linear-gradient(90deg, #35C66B, #237249);
+    box-shadow: 0 0 20px 5px #121517;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+}
+
+.starbucks__icon-img {
+    width: 111%;
+    height: 111%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.starbucks__feature-text {
+    text-align: center;
+}
+
+.starbucks__feature-item h3 {
+    color: #121517;
+    font-size: 32px;
+    line-height: 52px;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.starbucks__feature-item p {
+    font-size: 20.13px;
+    color: #121517;
+    line-height: 163%;
+}
+
+/* Стили для секции delicious */
+.delicious-section{
+    background-image: url('/images/lines2.png');
+    margin-bottom: 100px;
+    background-size: 73%;
+    background-position: 113% -46%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.delicious-section .container{
+    display: flex;
+    align-items: center;
+}
+
+.delicious__wrapper {
+    display: flex;
+    margin-right: auto;
+    max-width: 548px;
+    width: 100%;
+    position: relative;
+    aspect-ratio: 530/755;
+}
+
+.delicious__wrapper::before {
+    content: '';
+    background: linear-gradient(45deg, 
+        #237249 0%, 
+        #237249 90%, 
+        #121517 90%);    
+    display: block;
+    width: 82%;
+    height: 88%;
+    position: absolute;
+    left: 0;
+    top: 72px;
+}
+
+/* ............................. */
+.delicious__features-title {
+    width: 190px;
+    height: 190px;
+    position: absolute;
+    text-align: center;
+    z-index: 3;
+    transform: translate(300px, 0px);
+}
+
+.delicious__discount-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.delicious__features-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40px, -40px);
+    font-size: 32px; /* Немного меньше, так как блок 154px vs 190px */
+    color: white;
+    text-align: center;
+    line-height: 86.5%;
+}
+/* ............................. */
+
+
+.delicious__image-figure {
+    width: 103%;
+    position: absolute;
+    transform: translate(-30px, -21px);
+    aspect-ratio: 449/665;
+}
+
+.delicious__wrapper-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 519px;
+    width: 100%;
+    gap: 63px;
+}
+
+.delicious__title {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 80.5px;
+}
+
+.delicious__title span {
+    background: linear-gradient(90deg, #35C66B, #237249);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.delicious__description {
+    font-size: 20px;
+    color: #D9D9D9;
+    line-height: 33px;
+}
+
+.delicious__cooking {
+    background-image: url('/images/cooking.png');
+    padding: 30px;
+    aspect-ratio: 519/275;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.delicious__cooking-button {
+    background: linear-gradient(90deg, #35C66B, #237249);
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: 600;
+    padding: 20px 42px 20px 43px;
+    cursor: pointer;
+    border-radius: 82.83px;
+    max-width: 379px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 14px;
+}
+
+.delicious__cooking-triangle {
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 20px solid #fff;
+    /* background-color: none; */
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+    align-items: center;
+}
+
+.delicious__cooking-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+
+
+/* Стили для Products */
+section.products-section{
+    margin-bottom: 68px;
+}
+
+.products__header {
+    display: flex;
+    margin-bottom: 54px;
+    max-width: 800px;
+    column-gap: 72px;
+}
+
+.products__title {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 89.79px;
+    max-width: 392px;
+    color: #fff;
+}
+
+.products__title span{
+    background: linear-gradient(90deg, #35C66B, #237249);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.products__description {
+    padding: 17px 0 15px 0;
+    font-size: 20px;
+    line-height: 32.7px;
+    max-width: 444px;
+    color: #D9D9D9;
+}
+
+.products__cards {
+    display: flex;
+    gap: 54px;
+}
+
+.product-card {
+    background:
+        linear-gradient(#121517, #121517) padding-box,
+        linear-gradient(120deg, 
+        #DADADA,
+        #222526,
+        #DADADA) border-box;
+    border: 1.5px solid transparent;
+    border-radius: 29px;
+    padding: 63px 31px 30px 32.93px;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px 3px #237249;
+    background: 
+        linear-gradient(#121517, #121517) padding-box,
+        linear-gradient(90deg, #35C66B, #237249) border-box;
+}
+
+.product-card::before {
+    width: 182.55px;
+    height: 182.55px;
+    background: linear-gradient(90deg, #35C66B, #237249);
+    box-shadow: 0 0 20px 5px #121517;
+    border-radius: 50%;
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 64px;
+    transform: translateX(-50%);
+}
+
+.product-card__img{
+    position: absolute;
+    transform: translate(-50%, -73px);
+    width: 321px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    left: 50%;
+}
+
+.product-card__content {
+    margin-top: 217px;
+    max-width: 216px;
+    text-align: center;
+}
+
+.product-card__title {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 500;
+    margin-bottom: 11px;
+    color: #fff;
+}
+
+.product-card__description {
+    font-size: 20.13px;
+    line-height: 32.9px;/*лиюо 1.635 или 33px*/
+    color: #D9D9D9;
+    margin-bottom: 13px;
+}
+
+.product-card__specifications{
+    display: flex;
+    margin-bottom: 26px;
+    gap: 35px;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.product-card__price {
+    font-size: 32px;
+    line-height: 37px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.product-card__volume {
+    font-size: 20.13px;
+    line-height: 23.48px;
+    color: #D9D9D9;
+}
+
+.product-card__button {
+    background: linear-gradient(90deg, #35C66B, #237249);
+    color: #fff;
+    border: none;
+    padding: 14.42px 38.07px 14.65px 38.93px;
+    border-radius: 59.72px;
+    font-weight: 600;
+    font-size: 17.3px;
+    line-height: 25px;
+    cursor: pointer;
+    max-width: 186px;
+    width: 100%;
+}
+
+.product-card__button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.products-cards__link{
+    margin-top: 244px;
+    height: 84px;
+    width: 84px;
+    transform: rotate(90deg);
+    transform-origin: center center; /* Точка вращения по центру */
+}
+
+/* Адаптивность для Products */
+@media (max-width: 992px) {
+    .products__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .products__title {
+        font-size: 36px;
+    }
+    
+    .products__description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-section {
+        padding: 60px 0;
+    }
+    
+    .products__header {
+        margin-bottom: 50px;
+    }
+    
+    .products__grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 400px;
+    }
+    
+    .products__title {
+        font-size: 28px;
+    }
+    
+    .product-card {
+        padding: 25px;
+        min-height: 250px;
+    }
+    
+    .product-card__title {
+        font-size: 20px;
+    }
+    
+    .product-card__price {
+        font-size: 24px;
+    }
+}
+
+
+/* Стили для Events */
+.events-section {
+    background-image: url('/images/lines2.png');
+    margin-bottom: 147px;
+}
+
+.events__header {
+    display: flex;
+    gap: 77px;
+    margin-left: auto;
+    margin-bottom: 54px;
+    justify-content: flex-end;
+}
+
+.events__description {
+    margin-top: 23px;
+    font-size: 20px;
+    color: #D9D9D9;
+    line-height: 32.7px;
+    max-width: 455px;
+    letter-spacing: -0.02em;
+}
+
+.events__title {
+    font-size: 80px;
+    line-height: 87.6px;
+    font-weight: 700;
+    color: #fff;
+    max-width: 366px;
+    letter-spacing: -0.03em;
+}
+
+
+.events__title span{
+    background: linear-gradient(90deg, #35C66B, #237249);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.events__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.events__grid-first{
+    flex: 1;
+    display: flex;
+    gap: 24px;
+}
+
+.events__card{
+    height: 260px;
+    /* overflow: hidden; */
+    border-radius: 30px;
+    position: relative;
+}
+
+.events__grid-first .event-card {
+    max-width: 614.55px;
+    width: 100%;
+    padding: 44px 28.55px 27.35px;
+    border-radius: 30px;
+}
+
+.events__grid-first .event-card:first-child {
+    background-image: url('/images/event1.png');
+}
+
+.events__grid-first .event-card:last-child {
+    background-image: url('/images/event2.png');
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px 3px #fff;
+}
+
+.event-card__title {
+    font-size: 32px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 34.72px;
+    margin-bottom: 44px;
+}
+
+.event-card__button {
+    background: linear-gradient(90deg, #35C66B, #237249);
+    border: none;
+    border-radius: 82.83px;
+    padding: 20px 51.71px;
+    font-size: 24px;
+    line-height: 35.16px;
+    color: #D9D9D9;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.event-card__button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.events__grid-second{
+    flex: 1;
+    display: flex;
+    gap: 23.79px;
+}
+
+.events__grid-second .event-card {
+    max-width: 401.47px;
+    width: 100%;
+    padding: 44px 28.74px 22.35px;
+    border-radius: 30px;
+}
+
+.events__grid-second .event-card:first-child {
+    background-image: url('/images/event3.png');
+}
+
+.events__grid-second .event-card:nth-child(2) {
+    background-image: url('/images/event4.png');
+}
+
+.events__grid-second .event-card:last-child {
+    background-image: url('/images/event5.png');
+}
+
+
+/* Адаптивность для Events */
+@media (max-width: 1200px) {
+    .events__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+    
+    .event-card--featured {
+        grid-column: span 3;
+    }
+    
+    .events__title {
+        font-size: 36px;
+    }
+    
+    .events__description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .events__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .event-card--featured {
+        grid-column: span 2;
+    }
+    
+    .event-card__content {
+        padding: 20px;
+        min-height: 120px;
+    }
+    
+    .event-card__title {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    .event-card__button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .events-section {
+        padding: 60px 0;
+    }
+    
+    .events__header {
+        margin-bottom: 50px;
+    }
+    
+    .events__grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 400px;
+    }
+    
+    .event-card--featured {
+        grid-column: span 1;
+    }
+    
+    .events__title {
+        font-size: 28px;
+    }
+    
+    .event-card__image {
+        height: 180px;
+    }
+    
+    .event-card__content {
+        min-height: 110px;
+        padding: 15px;
+    }
+    
+    .event-card__title {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    
+    .event-card__button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 428px) {
+    .events-section {
+        padding: 40px 0;
+    }
+    
+    .events__header {
+        margin-bottom: 30px;
+    }
+    
+    .events__title {
+        font-size: 24px;
+    }
+    
+    .events__description {
+        font-size: 14px;
+    }
+    
+    .event-card__image {
+        height: 150px;
+    }
+    
+    .event-card__content {
+        min-height: 100px;
+        padding: 12px;
+    }
+    
+    .event-card__title {
+        font-size: 14px;
+    }
+}
+
+
+/* Стили для Contacts */
+.contacts .container{
+    padding: 49px 126px 31px 92px;
+    display: flex;
+}
+
+.contacts__wrapper-text {
+    flex: 1;
+    max-width: 391px;
+    margin-right: auto;
+}
+
+.contacts__title {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 88px;
+    max-width: 365px;
+    margin-bottom: 52px;
+}
+
+.contacts__title span {
+    background: linear-gradient(90deg, #35C66B, #237249);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contacts__text {
+    font-size: 20px;
+    color: #D9D9D9;
+    line-height: 33px;
+    max-width: 387px;
+    margin-bottom: 55px;
+    letter-spacing: -0.02em;
+}
+
+.contacts__info{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.contacts__info-line{
+    display: flex;
+    column-gap: 14px;
+    align-items: center;
+}
+
+.contacts__line-img1{
+    margin-right: 14px;
+}
+
+.contacts__line-img2{
+    margin-right: 24px;
+}
+
+.contacts__line-text{
+    font-size: 32px;
+    color: #D9D9D9;
+    line-height: 42px;
+    font-weight: 500;
+}
+
+.contacts__card {
+    display: flex;
+    position: relative;
+    transform: translate(0, 27px);
+    aspect-ratio: 390/548;
+}
+
+/* ............................. */
+.contacts__features-title {
+    width: 190px;
+    height: 190px;
+    position: absolute;
+    text-align: center;
+    z-index: 3;
+    transform: translate(-80px, -60px);
+}
+
+.contacts__discount-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.contacts__features-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40px, -45px);
+    font-size: 32px; /* Немного меньше, так как блок 154px vs 190px */
+    color: white;
+    text-align: center;
+    line-height: 86.5%;
+}
+/* ............................. */
+
+.contacts__image-figure {
+    padding: 96.4px 0 0 123.08px;
+    content: '';
+    position: absolute;
+    width: 353.92px;
+    height: 520.6px;
+    background: linear-gradient(135deg, 
+        #121517 0%, 
+        #121517 10%, 
+        #237249 10%);  
+    /*гипотенуза 629,5 sin= 520.6/629.5* = 0.735907, 1- 90 deg, 0.735907 - x deg = 66.23 deg */
+    z-index: 1;
+}
+
+.contacts__image {
+    padding:69px 34.25px 27.4px 88.83px;
+    width: 353.92px;
+    height: 520.6px;
+    z-index: 2;
+}
+
+.contacts{
+    background-image: url('/images/lines3.png');
+    margin-bottom: 135px;
+}
+
+
+/* Адаптивность для Contacts */
+@media (max-width: 1200px) {
+    .contacts .container {
+        padding: 40px 60px 25px 60px;
+        flex-direction: column;
+        gap: 60px;
+    }
+    
+    .contacts__wrapper-text {
+        margin-right: 0;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    
+    .contacts__title {
+        font-size: 60px;
+        line-height: 1.2;
+        height: auto;
+        max-width: 500px;
+        margin: 0 auto 40px;
+    }
+    
+    .contacts__text {
+        font-size: 18px;
+        height: auto;
+        max-width: 600px;
+        margin: 0 auto 40px;
+    }
+    
+    .contacts__info {
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .contacts__card {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    .contacts__image-figure,
+    .contacts__image {
+        width: 300px;
+        height: 440px;
+    }
+    
+    .contacts__image-figure {
+        padding: 60px 0 0 80px;
+    }
+    
+    .contacts__image {
+        padding: 40px 20px 20px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacts {
+        padding: 40px 20px 60px;
+    }
+    
+    .contacts .container {
+        padding: 30px 20px 15px 20px;
+        gap: 40px;
+    }
+    
+    .contacts__title {
+        font-size: 36px;
+        max-width: 300px;
+    }
+    
+    .contacts__text {
+        font-size: 16px;
+        max-width: 400px;
+    }
+    
+    .contacts__line-text {
+        font-size: 24px;
+    }
+    
+    .contacts__image-figure,
+    .contacts__image {
+        width: 250px;
+        height: 370px;
+    }
+    
+    .contacts__image-figure {
+        padding: 50px 0 0 70px;
+    }
+    
+    .contacts__image {
+        padding: 30px 15px 15px 40px;
+    }
+}
+
+@media (max-width: 428px) {
+    .contacts {
+        padding: 30px 15px 40px;
+    }
+    
+    .contacts .container {
+        padding: 20px 15px 10px 15px;
+        gap: 30px;
+    }
+    
+    .contacts__title {
+        font-size: 28px;
+        max-width: 250px;
+    }
+    
+    .contacts__text {
+        font-size: 14px;
+        max-width: 300px;
+    }
+    
+    .contacts__line-text {
+        font-size: 20px;
+    }
+    
+    .contacts__info-line {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .contacts__line-img1,
+    .contacts__line-img2 {
+        margin-right: 0;
+    }
+    
+    .contacts__image-figure,
+    .contacts__image {
+        width: 200px;
+        height: 300px;
+    }
+    
+    .contacts__image-figure {
+        padding: 40px 0 0 60px;
+    }
+    
+    .contacts__image {
+        padding: 25px 10px 10px 35px;
+    }
+}
+
+
+
+/* Стили для Footer */
+
+.footer{
+    background-color: #0B0C0D;
+    padding: 38px 0 46px;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__info{
+    margin-right: 66px;
+}
+
+.footer__info-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 37px;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 41px;
+    display: flex;
+    background: linear-gradient(90deg, #35C66B, #237249);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 176.89px;
+}
+
+.footer__info-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 32px;
+    display: flex;
+    background: linear-gradient(90deg, #35C66B, #237249);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer__nav{
+    padding-top: 7px;
+    display: flex;
+    gap: 82px;
+    margin-right: 108px;
+}
+
+.footer__nav-lists{
+    list-style: none;
+}
+
+.footer__nav-item{
+    margin-bottom: 8px;
+}
+
+.footer__nav-link {
+    color: #BBB3B3;
+    opacity: 0.43;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+    text-decoration: none;
+    line-height: 23px;
+    display: block;
+}
+
+.footer__nav-link:hover {
+    opacity: 1;
+}
+
+
+.footer__link-title{
+    color: #BBB3B3;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    line-height: 24px;
+    display: block;
+}
+
+.footer__link-title:hover{
+    opacity: 0.43;
+
+}
+
+.footer__links{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 128.89px;
+}
+
+a.footer__link{
+    width: 84px;
+    height: 84px;
+    display: flex;
+    margin-left: auto;
+}
+
+.footer__link-main{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.footer__link-social{
+    padding-left: 37.89px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* Адаптивность */
+/* Адаптивность для секции delicious */
+
+@media (max-width: 1200px) {
+    .delicious-section {
+        padding: 80px 200px 0 40px;
+    }
+    
+    .delicious-section .container {
+        padding: 50px 60px 25px 60px;
+        flex-direction: column;
+        gap: 60px;
+    }
+    
+    .delicious__wrapper {
+        margin-right: 0;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+    
+    .delicious__image-figure,
+    .delicious__image {
+        width: 400px;
+        height: 580px;
+    }
+    
+    .delicious__wrapper-text {
+        width: 100%;
+        height: auto;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .delicious__title {
+        font-size: 60px;
+        line-height: 1.2;
+        height: auto;
+        max-width: 500px;
+    }
+    
+    .delicious__description {
+        font-size: 18px;
+        line-height: 1.6;
+        height: auto;
+        max-width: 600px;
+    }
+    
+    .delicious__cooking {
+        width: 100%;
+        max-width: 400px;
+        height: 200px;
+        padding: 60px 40px;
+    }
+    
+    .delicious__cooking-button {
+        font-size: 20px;
+        padding: 15px 30px;
+        height: 60px;
+        width: 280px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .delicious-section {
+        padding: 40px 50px 0 20px;
+    }
+    
+    .delicious-section .container {
+        padding: 30px 20px 15px 20px;
+        gap: 40px;
+    }
+    
+    .delicious__wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .delicious__image-figure {
+        padding: 40px 50px 0 0;
+        width: 280px;
+        height: 400px;
+    }
+    
+    .delicious__image {
+        padding: 20px 25px 20px 30px;
+        width: 280px;
+        height: 400px;
+    }
+    
+    .delicious__title {
+        font-size: 36px;
+        line-height: 1.3;
+        max-width: 300px;
+    }
+    
+    .delicious__description {
+        font-size: 14px;
+        line-height: 1.5;
+        max-width: 400px;
+    }
+    
+    .delicious__cooking {
+        height: 150px;
+        padding: 40px 20px;
+        max-width: 320px;
+    }
+    
+    .delicious__cooking-button {
+        font-size: 16px;
+        padding: 10px 20px;
+        height: 50px;
+        width: 220px;
+    }
+    
+    .delicious__cooking-triangle {
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 12px solid #fff;
+    }
+}
+
+@media (max-width: 428px) {
+    .delicious-section {
+        padding: 30px 20px 0 15px;
+    }
+    
+    .delicious-section .container {
+        padding: 20px 15px 10px 15px;
+        gap: 30px;
+    }
+    
+    .delicious__image-figure {
+        padding: 30px 35px 0 0;
+        width: 220px;
+        height: 320px;
+    }
+    
+    .delicious__image {
+        padding: 15px 20px 15px 25px;
+        width: 220px;
+        height: 320px;
+    }
+    
+    .delicious__title {
+        font-size: 28px;
+        max-width: 250px;
+    }
+    
+    .delicious__description {
+        font-size: 13px;
+        max-width: 300px;
+    }
+    
+    .delicious__cooking {
+        height: 120px;
+        padding: 30px 15px;
+        max-width: 280px;
+    }
+    
+    .delicious__cooking-button {
+        font-size: 14px;
+        padding: 8px 15px;
+        height: 45px;
+        width: 200px;
+    }
+    
+    .delicious__cooking-triangle {
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        border-left: 10px solid #fff;
+    }
+}
+
+/* Адаптивность для Footer */
+@media (max-width: 1200px) {
+    .footer .container {
+        padding: 30px 80px 25px 80px;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    
+    .footer__info {
+        margin-left: 0;
+    }
+    
+    .footer__info-logo {
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer .container {
+        padding: 25px 50px 20px 50px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer__nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    
+    .footer__info-logo {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer .container {
+        padding: 20px 30px 15px 30px;
+        gap: 30px;
+    }
+    
+    .footer__nav {
+        gap: 30px;
+    }
+    
+    .footer__nav-lists {
+        gap: 40px;
+    }
+    
+    .footer__info-logo {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    
+    .footer__info-number {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 428px) {
+    .footer .container {
+        padding: 15px 20px 10px 20px;
+        gap: 25px;
+    }
+    
+    .footer__nav {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .footer__nav-lists {
+        gap: 20px;
+    }
+    
+    .footer__info-logo {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .footer__info-number {
+        font-size: 18px;
+    }
+    
+    .nav__link-title,
+    .nav__link {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 992px) {
+    .container {
+        padding: 0 40px;
+    }
+    
+    .starbucks__info {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .starbucks__promo {
+        min-width: 100%;
+        max-width: 400px;
+    }
+    
+    .starbucks__features {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .starbucks__features-text {
+        writing-mode: horizontal-tb;
+        transform: none;
+    }
+    
+    .header .container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+    
+    .header__logo {
+        margin-right: 0;
+    }
+    
+    .nav__lists {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .header {
+        height: auto;
+        position: relative;
+    }
+    
+    .starbucks-section {
+        margin-top: 0;
+        padding: 60px 0 40px;
+    }
+    
+    .starbucks__title {
+        font-size: 36px;
+    }
+    
+    .starbucks__stats {
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+    
+    .starbucks__stat-item {
+        text-align: center;
+        flex: 1;
+        min-width: 120px;
+    }
+    
+    .starbucks__buttons {
+        align-items: center;
+    }
+    
+    .starbucks__button-primary,
+    .starbucks__button-secondary {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .nav__lists {
+        gap: 30px;
+    }
+    
+    .header__logo {
+        font-size: 32px;
+    }
+    
+    .nav__link {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 428px) {
+    .container {
+        padding: 0 25px;
+    }
+    
+    .starbucks__promo {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .starbucks__stats {
+        gap: 20px;
+    }
+    
+    .starbucks__stat-number {
+        font-size: 28px;
+    }
+    
+    .nav__lists {
+        gap: 20px;
+    }
+    
+    .header__logo {
+        font-size: 28px;
+    }
+    
+    .nav__link {
+        font-size: 14px;
+    }
+    
+    .starbucks__feature-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
 }
