@@ -23,6 +23,8 @@ body {
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;
+    z-index: 1000;
     padding: 48px 0;
 }
 
@@ -205,15 +207,23 @@ body {
     object-fit: contain;
 }
 
+.starbucks__promo-discount svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .starbucks__discount-text {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-45px, -45px) rotate(-150deg);
+    transform: translate(-50%, -50%) rotate(-150deg);
     font-weight: 500;
     font-family: 'Montserrat', sans-serif;
-    line-height: 48px;
-    font-size: 44px;
+    line-height: 1;
+    font-size: 56px;
+    white-space: nowrap;
     color: #fff;
 }
 
@@ -323,12 +333,7 @@ body {
 
 /* Стили для секции delicious */
 .delicious-section{
-    background-image: url('/images/lines2.png');
     margin-bottom: 100px;
-    background-size: 73%;
-    background-position: 113% -46%;
-    background-repeat: no-repeat;
-    overflow: hidden;
 }
 
 .delicious-section .container{
@@ -361,25 +366,27 @@ body {
 
 /* ............................. */
 .delicious__features-title {
-    width: 190px;
-    height: 190px;
+    width: 154px;
+    height: 154px;
     position: absolute;
     text-align: center;
     z-index: 3;
-    transform: translate(300px, 0px);
+    left: 335px;
+    top: 43px;
 }
 
-.delicious__discount-img {
+.delicious__features-title svg {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
 }
 
 .delicious__features-text {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-40px, -40px);
+    transform: translate(-50%, -50%);
     font-size: 32px; /* Немного меньше, так как блок 154px vs 190px */
     color: white;
     text-align: center;
@@ -473,12 +480,13 @@ body {
 
 /* Стили для Products */
 section.products-section{
-    margin-bottom: 68px;
+    margin-bottom: 18px;
+    overflow: hidden;
 }
 
 .products__header {
     display: flex;
-    margin-bottom: 54px;
+    margin-bottom: 14px;
     max-width: 800px;
     column-gap: 72px;
 }
@@ -506,12 +514,30 @@ section.products-section{
     color: #D9D9D9;
 }
 
+.products__slider {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 36px;
+}
+
 .products__cards {
     display: flex;
     gap: 54px;
+    flex: none;
+    width: calc(50vw - 50% + 957px);   /* 957 = 3 карточки + 2 между */
+    margin-left: calc(50% - 50vw);
+    padding: 40px 0 50px calc(50vw - 50%);
+    /* прокрутка */
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.products__cards::-webkit-scrollbar {
+    display: none;
 }
 
 .product-card {
+    flex: 0 0 283px;
     background:
         linear-gradient(#121517, #121517) padding-box,
         linear-gradient(120deg, 
@@ -616,9 +642,11 @@ section.products-section{
 }
 
 .products-cards__link{
-    margin-top: 244px;
+    margin-top: 244px; /* 244 + 40px верхнего padding */
     height: 84px;
     width: 84px;
+    flex-shrink: 0;
+    cursor: pointer;
     transform: rotate(90deg);
     transform-origin: center center; /* Точка вращения по центру */
 }
@@ -675,7 +703,6 @@ section.products-section{
 
 /* Стили для Events */
 .events-section {
-    background-image: url('/images/lines2.png');
     margin-bottom: 147px;
 }
 
@@ -988,33 +1015,45 @@ section.products-section{
 }
 
 .contacts__card {
-    display: flex;
     position: relative;
-    transform: translate(0, 27px);
-    aspect-ratio: 390/548;
+    flex-shrink: 0;
+    width: 353.92px;
+    height: 520.6px;
+    margin-top: 27px;
 }
 
+/* зелёная подложка со смещением вправо-вниз */
+.contacts__card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translate(27px, 24px);
+    background: #237249;
+    z-index: 0;
+}
 /* ............................. */
 .contacts__features-title {
-    width: 190px;
-    height: 190px;
+    width: 154px;
+    height: 154px;
     position: absolute;
-    text-align: center;
+    left: -44px;
+    top: -25px;
     z-index: 3;
-    transform: translate(-80px, -60px);
 }
 
-.contacts__discount-img {
+.contacts__features-title svg {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
 }
+
 
 .contacts__features-text {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-40px, -45px);
+    transform: translate(-50%, -50%);
     font-size: 32px; /* Немного меньше, так как блок 154px vs 190px */
     color: white;
     text-align: center;
@@ -1022,30 +1061,19 @@ section.products-section{
 }
 /* ............................. */
 
-.contacts__image-figure {
-    padding: 96.4px 0 0 123.08px;
-    content: '';
-    position: absolute;
-    width: 353.92px;
-    height: 520.6px;
-    background: linear-gradient(135deg, 
-        #121517 0%, 
-        #121517 10%, 
-        #237249 10%);  
-    /*гипотенуза 629,5 sin= 520.6/629.5* = 0.735907, 1- 90 deg, 0.735907 - x deg = 66.23 deg */
-    z-index: 1;
-}
 
 .contacts__image {
-    padding:69px 34.25px 27.4px 88.83px;
-    width: 353.92px;
-    height: 520.6px;
-    z-index: 2;
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.contacts{
-    background-image: url('/images/lines3.png');
-    margin-bottom: 135px;
+.contacts {
+    padding-bottom: 135px;
+    overflow: hidden;
 }
 
 
@@ -1085,25 +1113,11 @@ section.products-section{
     }
     
     .contacts__card {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
+        width: 300px;
+        height: 440px;
         margin: 0 auto;
     }
     
-    .contacts__image-figure,
-    .contacts__image {
-        width: 300px;
-        height: 440px;
-    }
-    
-    .contacts__image-figure {
-        padding: 60px 0 0 80px;
-    }
-    
-    .contacts__image {
-        padding: 40px 20px 20px 50px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -1308,6 +1322,69 @@ a.footer__link{
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+
+
+/* Фоновые линии (1512px) */
+.starbucks-section,
+.delicious-section,
+.events-section,
+.contacts {
+    position: relative;
+    isolation: isolate;
+}
+
+.starbucks-section::before,
+.delicious-section::before,
+.events-section::before,
+.contacts::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    background-repeat: no-repeat;
+}
+
+/* sturbucks */
+.starbucks-section::before {
+    background-image: url('/images/lines.png');
+    background-size: 813px 685px;
+    width: 813px;
+    height: 685px;
+    top: 216px;
+    right: 0;
+}
+
+/* delicious*/
+.delicious-section::before {
+    background-image: url('/images/lines2.png');
+    background-size: 997px 999px;
+    width: 997px;
+    height: 640px;
+    top: 215px;
+    right: 0;
+}
+
+/* events*/
+.events-section::before {
+    background-image: url('/images/lines.png');
+    background-size: 813px 685px;
+    width: 813px;
+    height: 685px;
+    top: 0;
+    left: -108px;
+    transform: scaleX(-1);
+}
+
+/* contacts */
+.contacts::before {
+    background-image: url('/images/lines3.png');
+    background-size: 1008px 870px;
+    width: 1008px;
+    height: 670px;
+    bottom: -131px;
+    right: 0;
 }
 
 
