@@ -20,6 +20,9 @@
                     <li class="nav__item"><a href="#" class="nav__link">Shop</a></li>
                 </ul>
             </nav>
+            <button class="header__burger" type="button" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
 
@@ -339,13 +342,17 @@
     const step = () => card.offsetWidth + parseFloat(getComputedStyle(track).columnGap);
 
     // при загрузке первая карточка частично уходит за край
-    track.scrollLeft = step();
+    track.scrollLeft = step() - (window.innerWidth <= 768 ? 60 : 0);
 
     // стрелка листает на одну карточку, в конце возвращает в начало
     nextBtn.addEventListener('click', () => {
         const max = track.scrollWidth - track.clientWidth;
         const left = track.scrollLeft >= max - 25 ? 0 : track.scrollLeft + step();
         track.scrollTo({ left, behavior: 'smooth' });
+    });
+
+    document.querySelector('.header__burger').addEventListener('click', () => {
+        document.querySelector('.header').classList.toggle('header--open');
     });
 </script>
 
